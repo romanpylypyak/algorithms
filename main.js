@@ -85,17 +85,17 @@ function mersensNumbers(n) {
     let arr = []
     nextPrime:
 
-        for (let i = 2; i <= n; i++) { // Для всех i...
-            for (let j = 2; j < i; j++) { // проверить, делится ли число..
-                if (i % j == 0) {
-                    continue nextPrime; // не подходит, берём следующее
+        for (let i = 2; i <= n; i++) { 
+            for (let k = 2; k < i; k++) { 
+                if (i % k == 0) {
+                    continue nextPrime; 
                 }
             }
-            let k = (2 ** i - 1)
-            arr.push(k)
+            let x = (2 ** i - 1)
+            arr.push(x)
         }
 
-    console.log(`Mersenne primes are ${arr}`); // простое число
+    console.log(`Mersenne primes are ${arr}`); 
 }
 
 mersensNumbers(20)
